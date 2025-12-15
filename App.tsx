@@ -4,6 +4,9 @@ import { HashRouter, Routes, Route, useLocation, Navigate, useNavigate } from 'r
 import { Home, PieChart, BarChart3, Wallet, User as UserIcon, Shield } from 'lucide-react';
 import { AuthState, User } from './types';
 import { getCurrentUser, subscribeToAuth } from './services/backend';
+// Vercel Analytics & Speed Insights
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 // Pages
 import AuthPage from './pages/AuthPage';
@@ -127,6 +130,10 @@ function AppContent() {
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <BottomNav />
+      
+      {/* Vercel Analytics & Speed Insights */}
+      <Analytics />
+      <SpeedInsights />
     </div>
   );
 }
