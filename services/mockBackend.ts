@@ -1,0 +1,1 @@
+// This file is deprecated. Please use services/backend.ts for real Firebase integration.
